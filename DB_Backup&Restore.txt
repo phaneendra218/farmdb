@@ -1,0 +1,5 @@
+Backup:
+Right click and Backup > Brouse and select sql > Format: Tar > Backup
+
+Restore:
+Right click and Restore > Foramt Custom or tar > select db sql file > Restore
