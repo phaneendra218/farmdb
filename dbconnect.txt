@@ -1,0 +1,36 @@
+Name: FarmPSQL1
+Hostname: dpg-d5cgngur433s739lp5n0-a
+PostgreSQL Version: 16
+Region: Oregon (US West)
+Port: 5432
+Database: farm_8sfr_s89d_cyt7
+Username: farmpsql_user
+Password: 5GkFBQDL6ODdKpNIvwG53eFY49sEBibC
+Internal Database URL: postgresql://farmpsql_user:5GkFBQDL6ODdKpNIvwG53eFY49sEBibC@dpg-d5cgngur433s739lp5n0-a/farm_8sfr_s89d_cyt7
+External Database URL: postgresql://farmpsql_user:5GkFBQDL6ODdKpNIvwG53eFY49sEBibC@dpg-d5cgngur433s739lp5n0-a.oregon-postgres.render.com/farm_8sfr_s89d_cyt7
+PSQL Command: PGPASSWORD=5GkFBQDL6ODdKpNIvwG53eFY49sEBibC psql -h dpg-d5cgngur433s739lp5n0-a.oregon-postgres.render.com -U farmpsql_user farm_8sfr_s89d_cyt7
+ 
+For pgadmin connection
+Name: farm1
+HostName: dpg-d5cgngur433s739lp5n0-a.oregon-postgres.render.com
+Maintenance database: farm_8sfr_s89d_cyt7
+Username: farmpsql_user
+
+Through CLI:
+Restore/load
+PGPASSWORD=5GkFBQDL6ODdKpNIvwG53eFY49sEBibC \
+pg_restore -h dpg-d5cgngur433s739lp5n0-a.oregon-postgres.render.com \
+-U farmpsql_user \
+-d farm_8sfr_s89d_cyt7 \
+--format=tar \
+--verbose \
+clifarmBackup03Jan2026db.sql
+
+Backup:
+PGPASSWORD=5GkFBQDL6ODdKpNIvwG53eFY49sEBibC \
+pg_dump -h dpg-d5cgngur433s739lp5n0-a.oregon-postgres.render.com \
+-U farmpsql_user \
+-d farm_8sfr_s89d_cyt7 \
+--format=tar \
+--verbose \
+--file=clifarmBackup03Jan2026db.sql
